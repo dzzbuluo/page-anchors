@@ -1,0 +1,115 @@
+/* ============================================
+   Page Anchors - Injected via Manifest V3
+   All class names prefixed with "pa-" to
+   avoid collisions with page styles.
+   ============================================ */
+
+/* --- Strip Container --- */
+.pa-strip {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  z-index: 2147483646;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: opacity 0.2s ease;
+  opacity: 0.3;
+}
+
+.pa-strip:hover {
+  opacity: 1;
+}
+
+.pa-strip.pa-has-anchors {
+  opacity: 1;
+}
+
+/* --- Faint vertical guide track --- */
+.pa-track {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  width: 2px;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.12);
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+/* --- Individual Anchor Dots --- */
+.pa-dot {
+  position: absolute;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 50%;
+  background: #1a73e8;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.12s ease, background 0.12s ease, opacity 0.2s ease;
+  opacity: 0.85;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.pa-dot:hover {
+  transform: scale(1.8);
+  background: #1557b0;
+  opacity: 1;
+  box-shadow: 0 0 6px rgba(26, 115, 232, 0.5);
+}
+
+.pa-dot.pa-dot-removing {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* --- "+" Add Button at strip top --- */
+.pa-add-btn {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f6368;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 0.35;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.pa-add-btn:hover {
+  opacity: 0.7;
+  transform: scale(1.4);
+}
+
+/* --- Tooltip --- */
+.pa-tooltip {
+  position: fixed;
+  padding: 3px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 11px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.4;
+  border-radius: 3px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2147483647;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.pa-tooltip.pa-tooltip-visible {
+  opacity: 1;
+}
+
+/* --- Hide on print --- */
+@media print {
+  .pa-strip {
+    display: none !important;
+  }
+}
