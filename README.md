@@ -4,6 +4,8 @@
 
 Place anchor points on any webpage and jump between them with one click. Perfect for long docs, AI chat threads, infinite-scroll pages, and more.
 
+![Demo](assets/demo.gif)
+
 ## 功能 / Features
 
 - **添加锚点** — 按 `Alt` 键再点击页面任意位置，或按 `Alt+Shift+A`，或点击右侧竖条顶部的 `+`
