@@ -8,10 +8,12 @@ Place anchor points on any webpage and jump between them with one click. Perfect
 
 - **添加锚点** — 按 `Alt` 键再点击页面任意位置，或按 `Alt+Shift+A`，或点击右侧竖条顶部的 `+`
 - **一键跳转** — 点击右侧竖条上的蓝色圆点，页面平滑滚动到锚点位置
+- **上下导航** — `Ctrl+↑` 跳到上方最近锚点，`Ctrl+↓` 跳到下方最近锚点
+- **固定顶部/底部** — 竖条顶端和底端始终有固定锚点，点击可回到顶部或底部
 - **删除锚点** — 右键或双击圆点即可删除（带缩小淡出动画）
 - **查看标签** — 悬停圆点显示 "Anchor N" 标签
 - **零数据收集** — 所有锚点仅存在于当前会话，刷新页面自动消失
-- **适配所有页面** — 支持原生滚动和自定义滚动容器（SPA 框架）
+- **适配所有页面** — 支持原生滚动和 SPA 自定义滚动容器（DeepSeek、B站等）
 
 | Action | Shortcut |
 |--------|----------|
@@ -44,12 +46,14 @@ Place anchor points on any webpage and jump between them with one click. Perfect
 ```
 page-anchors/
 ├── manifest.json          # Manifest V3
-├── content-script.js      # 全部运行逻辑
+├── background.js          # Service Worker（脚本注入）
+├── content-script.js      # 核心逻辑（锚点管理、渲染、滚动）
 ├── styles.css             # 样式
-└── icons/                 # 扩展图标
+├── icons/                 # 扩展图标
+└── README.md              # 说明文档
 ```
 
-零依赖，无需构建工具。Three files, zero dependencies, no build step.
+零依赖，无需构建工具。Zero dependencies, no build step.
 
 ## 兼容性 / Compatibility
 
