@@ -1,6 +1,9 @@
 (function () {
   'use strict';
 
+  // Guard: prevent double injection (manifest + background injector)
+  if (document.querySelector('.pa-strip')) return;
+
   /* ==============================================
      State: module-level, session-only, no storage
      ============================================== */
