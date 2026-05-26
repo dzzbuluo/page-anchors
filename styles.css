@@ -66,6 +66,24 @@
   opacity: 0;
 }
 
+/* --- Fixed anchors at page top/bottom --- */
+.pa-dot-fixed {
+  position: absolute;
+  right: 4px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: rgba(128, 128, 128, 0.35);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.pa-dot-fixed:hover {
+  transform: scale(2.5);
+  background: rgba(128, 128, 128, 0.7);
+}
+
 /* --- "+" Add Button at strip top --- */
 .pa-add-btn {
   position: absolute;

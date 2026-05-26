@@ -17,6 +17,8 @@ Place anchor points on any webpage and jump between them with one click. Perfect
 |--------|----------|
 | Add anchor | `Alt+Click` or `Alt+Shift+A` or click `+` |
 | Jump to anchor | Click the blue dot |
+| Jump to nearest above | `Ctrl+↑` |
+| Jump to nearest below | `Ctrl+↓` |
 | Delete anchor | Right-click or double-click the dot |
 
 ## 安装方法 / Installation
