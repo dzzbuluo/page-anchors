@@ -4,7 +4,7 @@
 
 Place anchor points on any webpage and jump between them with one click. Perfect for long docs, AI chat threads, infinite-scroll pages, and more.
 
-![Demo](assets/demo.gif)
+<img src="assets/demo.gif" width="90%">
 
 ## 功能 / Features
 
